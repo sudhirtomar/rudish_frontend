@@ -1,0 +1,25 @@
+<%= link_to "Create New User", new_user_path %>
+<%if @users.present? %>
+  <p>Below is the list of users</p>
+  <table width="100%">
+    <tr>
+      <td>ID</td>
+      <td>first_name</td>
+      <td>email</td>
+      <td>Action</td>
+      </tr>
+      <%@users.each do |u|%>
+    <tr>
+      <td><%=u[:id]%></td>
+      <td><%=u[:name]%></td>
+      <td><%=u[:email]%></td>
+      <td>
+        <%= link_to "Edit", edit_user_path(u[:id]) %> | 
+        <%= link_to "Delete", user_path(u[:id]), :method => :delete %>
+      </td>
+    </tr>
+   <%end%>
+  </table>
+<%else%>
+  <p>No User is Found</p>
+<%end%>

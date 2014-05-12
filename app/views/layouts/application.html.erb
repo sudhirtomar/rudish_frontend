@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="/assets/favicon.ico" rel="shortcut icon">
+  <%= stylesheet_link_tag  "application", :media => "all" %>
+  <%= stylesheet_link_tag  "glo", "style","colorbox", "jquery"   %>
+  
+  <%= stylesheet_link_tag  "users.css", :media => "all" %>
+  <%= stylesheet_link_tag  "jquery-ui-1", :media => "all" %>
+ 
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "ja" %>
+  <%= javascript_include_tag "jquery_003", "jquery_010", "jquery_ujs", "jquery_002"  %>
+ 
+  <%= javascript_include_tag "jquery_013" %>
+  <%= javascript_include_tag "jquery_005" %>
+  <%= javascript_include_tag "jquery_004" %>
+  <%= javascript_include_tag "jquery_006" %>
+  <%= javascript_include_tag "jquery_007" %>
+  <%= javascript_include_tag "jquery_010" %>
+  <%= javascript_include_tag "ui" %>
+  <%= javascript_include_tag "awards_full_page" %>
+  <%= javascript_include_tag "award" %>
+  <%= javascript_include_tag "expander" %>
+  <%= javascript_include_tag "search" %>
+  <%= javascript_include_tag "activity" %>
+  <%= javascript_include_tag "birthdays" %>
+  <%= javascript_include_tag "users" %>
+
+  <%= javascript_include_tag "jquery_011" %>
+  <%= javascript_include_tag "jquery-ui-1" %>
+  <%= javascript_include_tag "jquery_012" %>
+  <%= javascript_include_tag "json2" %>
+  <%= javascript_include_tag "jquery_009" %>
+  <%= javascript_include_tag "tiny_mce" %>
+  <%= javascript_include_tag "profile" %>
+  <%= javascript_include_tag "jquery_008" %>
+  <%= javascript_include_tag "users" %>
+
+
+  <%= csrf_meta_tags %>
+<meta content="authenticity_token" name="csrf-param">
+<meta content="oZZoWQ8COwSTnUFSD+6hLPNl7mUwTTfhMMjp3bs3v/4=" name="csrf-token">
+
+
+</head>
+
+
+<body>
+  <div class="header">
+   <div class="header_wrapper">
+	<div class="logo_block"><a title="Rudish Home" href=""><b>GLO (Beta) </b>GlobalLogic Community Network</a></div>
+	  <div class="welcome_block">
+		<div class="section">Welcome <span class="user_name">User Name</span></div>
+		<div class="section"><a href="" class="setting" title="Preferences">Preferences</a></div>
+        <div class="section"><a href="" class="support" title="Support" target="_blank">Support</a></div>
+		<div class="section_last"><a href="" class="logout" id="glo_logout" onclick="/*Gab.connection.disconnect(); Gab.connection.send($pres().tree()); Gab.connection = null;return true;*/">Logout</a></div>
+		<div class="clear"></div>
+	</div>
+			<!-- Search section -->
+			<!-- Search section -->
+<div class="search_container">
+  <div>
+  <div class="label">Search Rudish by</div>
+  <div class="selector">
+    <div class="selected_search_menu"><a class="holycow open_search_menu" href="#">People</a></div>
+    <!-- Search criteria -->
+    <div onmouseover="hideDropDown = true; " onmouseout="hideDropDown = false;" id="dropdown" class="dropdown" style="display:none;">
+      <ul>
+		<li><a class="unified_search_options holycow" message="Search People by name, email, designation, phone..." object="User" href="#" formurl="/search/submit_live_search">People</a></li>
+		<li><a class="unified_search_options holycow" message="Search Skills by name..." object="Skill" href="#" formurl="/search/submit_skill_search">Skills</a></li>
+     </ul>
+    </div>
+
+    <!-- End Search criteria -->
+  </div>
+  <div class="search_textbox">
+    <div style="display: none;" onmouseover="hideSearchResults = true;" onmouseout="hideSearchResults = false;" class="autofill" id="results"></div>
+    <form id="live_search_form" action="/search/submit_live_search" method="get" onsubmit="return dialog_check();validate_query();">
+      <input value="Search People by name, email, designation, phone..." autocomplete="off" name="search" id="search" class="search_text post_time" maxlength="45" type="text">                        
+      <a class="adv_search" href="#" title="Advanced Search">Search</a>
+      <input id="search_by" name="search_by" value="User" type="hidden">
+      <input value="submit" style="display:none" type="submit">
+    </form>
+  </div>
+  <div class="clear"></div>
+  </div>
+   <!-- Skill tip box -->
+    <!-- End: Skill tip box -->
+    <div class="clear"></div>
+    </div>
+     <!-- End search section -->
+
+			<!-- End search section -->
+			<div class="clear"></div>
+		</div>
+	</div>
+
+	<!-- End header section -->
+	<!-- Navigation section -->
+	<div class="nav_bar">
+		<div class="nav_bar_wrapper">
+			<div id="nav_tab">
+				<ul>
+					<li><a href="" class="home" title="Rudish Home"><span>Rudish Home</span></a></li>
+					<li><a id="current" href="" class="profile" title="My Profile"><span>My Profile</span></a></li>
+					<li><a href="" class="team" title="Organization"><span>Organization</span></a></li>
+					<li><a href="" class="community" title="Followers"><span>Followers</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<%= yield %>
+
+</body>
+<div class="footer">
+        <div class="footer_wrapper">
+                <div class="feedback">
+                        Help improve GLO, <a href="https://glo.globallogic.com/communities/261" class="ext_link" title="Feedback">send us your feedback</a>
+			<span class="rlink_box"><a href="https://confluence.globallogic.com/display/EA/GLO" target="_blank">About GLO</a>
+			<span class="footer_version">&nbsp;</span><a href="https://confluence.globallogic.com/display/EA/GLO+FAQ" target="_blank">FAQ</a></span>
+                </div>
+                <div class="footer_copyright"><span class="footer_version">Version : 0.23.</span>Copyright © 2014 <a href="http://www.globallogic.com/" class="ext_link" title="GlobalLogic" onclick="void(window.open(this.href,'','')); return false;">GlobalLogic, Inc.</a> All Rights Reserved.</div>
+        </div>
+</div>
+</html>

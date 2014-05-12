@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    
+	<title><%= "Rudish:User's Profile" %></title>  
+  </head>
+  <body>
+    <div class="page_body">
+      <div class="page_body_wrapper admin">
+        <div id="admin_error" class="warning" style="display: none"></div>
+        <div id="admin_info" class="info" style="display: none"></div>
+         <div class="profile_column_layout">
+           <div class="side_column">
+    <!-- Profile image -->
+             <div class="profile_image_box with_chat">
+              <%= image_tag("pic.jpg", :alt => "Pic", :id =>"current_user_profile_photo_18110") %>
+             </div>
+    <!-- End profile image -->
+            <div class="profile_sidebar">
+      <!-- Profile actions -->
+              <div class="profile_action_container">
+                <div class="profile_action ">
+                  <%= link_to "Edit profile info", edit_user_path, :class => "edit_prof" %>
+                </div>
+              </div>
+      
+	        <div id="connection_box" class="sidebar_info_container ">
+	          <div class="connection_count_18110">
+	       	    <div>
+	              <a title="People who are following Sudhir" class="counts" href="/show_followers/user_id"> list of followers </a>
+	            </div>
+	           <div>
+	             <a title="People who Sudhir is following" class="counts" href="/show_followers/user_id">list of followings </a>
+	          </div>
+	          </div>
+          </div>
+      <div class="sidebar_info_container ">
+		<div class="info_unit">
+          <div class="text_label">Employee ID</div>
+          <div class="text_data">emp_id</div>
+        </div>
+		
+        <div class="info_unit">
+          <div class="text_label">Birthday</div>
+          <div class="text_data">dob</div>
+        </div>
+        <div class="info_unit">
+          <div class="text_label">Wedding Anniversary</div>
+          <div class="text_data">dob</div>
+        </div>
+      </div>
+      <!-- End info section -->
+        <div id="user_profile_skills_18110">
+	 <div class="info_container">
+      <div class="info_title">Skills Tags</div>
+      <div class="skill_set plain bar">
+              <a class="t4" href="https://glo.globallogic.com/search/submit_skill_search?search=Ruby+on+Rails&amp;search_by=Skill">List of Skills</a>
+      </div>
+      <div class="clear"></div>
+</div>
+	</div>
+      <!-- User Communities Start-->
+	  <div class="info_container">
+	<div class="lfcom_box">
+  </div>
+
+	</div>
+      <!-- User Communities End-->
+      
+      <!-- GLO ADMIN OPERATIONS START-->
+	<!-- GLO ADMIN OPERATIONS END-->
+	
+	<!-- HR ADMIN OPERATIONS START-->
+	<!-- HR ADMIN OPERATIONS END-->
+      
+    </div>
+  </div>
+  <div class="main_column">
+    <!-- Profile info -->
+    <div class="profile_info">
+      <div class="profile_tags">
+      </div>
+      <div id="name_stat_time" class="name_stat_time wordwrap">
+        <span class="name">Name Here</span>
+      </div>
+      <div class="desg_team_location">
+        <span>Position here</span>,
+      </div>
+      <div class="contact">
+        Phone - <span class="data"></span>
+        <span class="sep">|</span>
+        Mobile - <span class="data">9990759669</span>
+        <span class="sep">|</span>
+        e-Mail - <span class="data"><a href="http://mail.globallogic.com/mail/?shva=1#compose" target="_blank">sudhir.tomar@globallogic.com</a></span>
+      </div>
+    </div>
+    <!-- End profile info -->
+    <!-- Tabs section -->
+    <div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="sec_tab">
+      <ul class="tabcontainer ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+
+		    <li class="ui-state-default ui-corner-top"><a class="tablink" href="#posts" title="posts"><span>Activity</span></a></li>
+<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a class="tablink" href="#info" title="info"><span>Info</span></a></li>
+	<li class="ui-state-default ui-corner-top"><a class="tablink" href="#teams" title="teams"><span>Teams</span></a></li>
+       
+        <li class="ui-state-default ui-corner-top"><a class="tablink" href="#connections" title="connections"><span>Connections</span></a></li>
+        <li class="ui-state-default ui-corner-top"><a class="tablink" href="#pictures" title="pictures"><span>Pictures</span></a></li>
+       </ul>
+      <div class="tab_related_container">
+        <div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="posts"></div>
+	<div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="user_posts"></div>
+
+        <div class="ui-tabs-panel ui-widget-content ui-corner-bottom" id="info">
+        
+<!-- Info groups -->
+<div class="profile_info_box">
+
+  <div class="header_box">
+    <div class="text">Work Details</div>
+    <!--<a href="#" class="collapse">Collapse</a>-->
+    <div class="clear"></div>
+  </div>
+  <div class="profile_data_container">
+    <div class="left_column">
+      <div class="form_row">
+        <div class="form_label_display">Job Profile</div>
+        <div class="form_data_display wordwrap"></div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row">
+        <div class="form_label_display">Designation</div>
+        <div class="form_data_display wordwrap">Sr. Software Engineer</div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row">
+        <div class="form_label_display">Organization</div>
+        <div class="form_data_display wordwrap">
+		<a href="https://glo.globallogic.com/organizations/corporate_directory?id=3">Product Engineering and Development</a>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row">
+        <div class="form_label_display">Business Group</div>
+        <div class="form_data_display wordwrap">GlobalLogic India BG</div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row hide">
+        <div class="form_label_display">Total Experience</div>
+        <div class="form_data_display">&lt;p&gt;---&lt;/p&gt;</div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="right_column">
+      <div class="form_row">
+        <div class="form_label_display">Employee ID</div>
+        <div class="form_data_display">306598</div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row">
+        <div class="form_label_display">Date of Joining</div>
+        <div class="form_data_display">10-Feb-2014</div>
+        <div class="clear"></div>
+      </div>
+      
+      <div class="form_row">
+        <div class="form_label_display">Total Experience</div>
+        <div class="form_data_display">2 years 11 months</div>
+        <div class="clear"></div>
+      </div>
+      
+      <div class="form_row">
+        <div class="form_label_display">Band / Grade</div>
+        <div class="form_data_display">Band 1 / TE06</div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row hide">
+        <div class="form_label_display">Grade</div>
+        <div class="form_data_display">TE06</div>
+        <div class="clear"></div>
+      </div>
+    
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="profile_info_box">
+  <div class="header_box">
+    <div class="text">Contact Details</div>
+    <!--<a href="#" class="collapse">Collapse</a>-->
+    <div class="clear"></div>
+  </div>
+  <div class="profile_data_container">
+    <div class="left_column">
+      <div class="form_row">
+        <div class="form_label_display">Office Phone</div>
+        <div class="form_data_display wordwrap"></div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row">
+        <div class="form_label_display">Mobile</div>
+        <div class="form_data_display wordwrap">9990759669</div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row">
+        <div class="form_label_display">Emergency Phone</div>
+        <div class="form_data_display wordwrap"></div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row">
+        <div class="form_label_display">Fax</div>
+        <div class="form_data_display wordwrap"></div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row">
+        <div class="form_label_display">Voip Extension</div>
+        <div class="form_data_display wordwrap">2353</div>
+        <div class="clear"></div>
+      </div>
+    
+    
+      
+      <div class="form_row">
+        <div class="form_label_display">Room/Seat No.</div>
+        <div class="form_data_display wordwrap">2-w-146</div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row">
+        <div class="form_label_display">Location</div>
+        <div class="form_data_display">
+        	
+		        <a href="https://glo.globallogic.com/app/glsites?id=5" class="pin" title="Show Details">Noida</a>, now at NOIDA
+		</div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <div class="right_column">
+      <div class="form_row">
+        <div class="form_label_display">e-Mail</div>
+        <div class="form_data_display"><a href="http://mail.globallogic.com/mail/?shva=1#compose" target="_blank">sudhir.tomar@globallogic.com</a></div>
+        <div class="clear"></div>
+      </div>
+      
+      <div class="form_row">
+        <div class="form_label_display">Alternate e-Mail</div>
+        <div class="form_data_display wordwrap"></div>
+        <div class="clear"></div>
+      </div>
+      
+      <div class="form_row">
+        <div class="form_label_display">Skype ID</div>
+        <div class="form_data_display wordwrap">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row">
+        <div class="form_label_display">LinkedIn Profile</div>
+        <div class="form_data_display wordwrap">
+        </div>
+        <div class="clear"></div>
+      </div>
+      
+      <div class="form_row">
+        <div class="form_label_display">Twitter Profile</div>
+        <div class="form_data_display wordwrap">
+        </div>
+        <div class="clear"></div>
+      </div>
+      
+      <div class="form_row">
+        <div class="form_label_display">Facebook Profile</div>
+        <div class="form_data_display wordwrap">
+        </div>
+        <div class="clear"></div>
+      </div>
+     
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+
+<div class="profile_info_box">
+    <div class="header_box">
+      <div class="text">Address Details</div>
+      <!--<a href="#" class="collapse">Collapse</a>-->
+      <div class="clear"></div>
+    </div>
+    <div class="profile_data_container  address_detail_wrapper">
+      <div class="address_profile">
+	<div class="left_column">
+	  <div class="form_row">
+	    <div style="color: #333333;padding: 3px 5px;background: #f6f6f6;border-bottom: 1px solid #E1E4E7;margin-bottom: 5px;">Office Address</div>
+	    <div style="padding:0 5px;">
+	      GlobalLogic India Limited 
+	      <br>
+	    </div>
+	    <div class="clear"></div>
+	  </div>
+	</div>
+       
+	<div class="middle_column">
+	  <div class="form_row">
+	    <div style="color: #333333;padding: 3px 5px;background: #f6f6f6;border-bottom: 1px solid #E1E4E7;margin-bottom: 5px;">Legal Address</div>
+	      <div style="padding:0 5px;">
+		
+		1- Sidhari KA PURA KARARI
+		
+	      </div>
+	      <div class="clear"></div>
+	  </div>
+	</div>
+       
+	<div class="right_column">
+	  <div class="form_row">
+	    <div style="color: #333333;padding: 3px 5px;background: #f6f6f6;border-bottom: 1px solid #E1E4E7;margin-bottom: 5px;">Current Home Address</div>
+	    <div style="padding:0 5px;">
+	      	Sector-39
+		
+	    </div>
+	    <div class="clear"></div>
+	  </div>
+	</div>
+	<div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div class="profile_info_box">
+  <div class="header_box">
+    <div class="text">Other Details</div>
+    <!--<a href="#" class="collapse">Collapse</a>-->
+    <div class="clear"></div>
+  </div>
+  <div class="profile_data_container">
+    <div class="left_column">
+      <div class="form_row">
+        <div class="form_label_display">About me</div>
+        <div class="form_data_display wordwrap">
+          
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row">
+        <div class="form_label_display">Homepage</div>
+        <div class="clear"></div>
+      </div>
+       <div class="form_row">
+        <div class="form_label_display">Marital Status</div>
+        <div class="form_data_display wordwrap">Married</div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row hide">
+        <div class="form_label_display">Name in local language</div>
+        <div class="form_data_display wordwrap"></div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="right_column">
+	      <div class="form_row">
+	        <div class="form_label_display">Birthday</div>
+	        <div class="form_data_display">20th October</div>
+	        <div class="clear"></div>
+	      </div>
+	      <div class="form_row">
+	        <div class="form_label_display">Anniversary</div>
+	        <div class="form_data_display">30th November</div>
+	        <div class="clear"></div>
+	      </div>
+      <div class="form_row">
+        <div class="form_label_display">Vehicle Reg. 1</div>
+        <div class="form_data_display wordwrap"></div>
+        <div class="clear"></div>
+      </div>
+      <div class="form_row">
+        <div class="form_label_display">Vehicle Reg. 2</div>
+        <div class="form_data_display wordwrap"></div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- End info groups -->
+
+
+        </div>
+        
+	<div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="teams"></div><div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="career_profile"></div>
+	    <div id="career profile"></div>
+	    <div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="connections"></div>
+	    <div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="pictures"></div>
+	    <div id="communities"></div>
+	    <div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="recognitions"></div>
+      </div>
+    </div>
+    <!-- End tabs section -->
+  </div>
+  <div class="clear"></div>
+</div>
+
+        <div class="clear"></div>
+      </div>
+      <div id="dialog_gallery"></div>
+    </div>
+    <div style="display:none">
+      <div id="loading_album_message" style="text-align: center; vertical-align: middle;">
+        <!-- <img alt="Ajaxindicator" src="/assets/anim_loading_75x75.gif" tite="Ajaxindicator"> -->
+      </div>
+    </div>
+    <div id="user_profile_tooltip">
+
+    </div>  
+    <!-- End page body section -->
+    <!-- Page footer section -->
+
+<!-- End page footer section -->
+
+    <!--UTIP POPUP -->	
+    <div class="allcom_popup_wrapper" id="utip_popup" style="display:none;">
+      <div class="allcom_popup_box">
+        <div class="container">
+          <div class="allcom_arrow"></div>
+          <div class="mycom_popup">
+            <div class="box_up">
+              <div class="tmem_img">
+                <a class="utip_user_linking" title="View profile"><img id="utip_user_image" title="View profile"></a>
+              </div>
+              <div class="pro_dtlbox mycom_info">
+                <div class="nm_spacer">
+                  <a class="utip_user_linking down_link" id="utip_displayname" title="View profile"></a>
+                </div>
+                <div class="tmem_txt mycom_grtxt" id="utip_designation"></div>
+                <div class="tmem_contdtl mycom_cont">
+                  <div>
+                    <div>
+                      <div class="my_sprite ph_icon">Phone - </div>
+                      <div class="txt_wrp lc_cdw drk_gray" id="utip_phone"></div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div>
+                    <div>
+                      <div class="my_sprite email_icon">e-Mail -  </div>
+                      <div class="txt_wrp lc_cdw"><a href="http://mail.globallogic.com/mail/?shva=1#compose" target="_blank" title="e-mail" class="mycom_mail" id="utip_email"></a></div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="allclear"></div>
+            </div>
+            <div class="box_down">
+              <a href="#" class="down_link down_pad utip_user_linking" title="View profile">View Profile</a>
+              <span id="add_follow_link"></span>
+              <div class="allclear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>	
+    <!--UTIP POPUP END-->
+  
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-helper-hidden-accessible"></div><div style="display: none;" id="cboxOverlay"></div><div style="display: none; padding-bottom: 42px; padding-right: 42px;" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="width: 0px; height: 0px; overflow: hidden; float: left;" id="cboxLoadedContent"></div><div style="float: left;" id="cboxLoadingOverlay"></div><div style="float: left;" id="cboxLoadingGraphic"></div><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><div style="float: left;" id="cboxNext"></div><div style="float: left;" id="cboxPrevious"></div><div style="float: left;" id="cboxSlideshow"></div><div style="float: left;" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

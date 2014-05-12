@@ -1,0 +1,678 @@
+<%= form_tag user_path, :method => :put do %>
+   email : <%=text_field_tag :email, @user[:email]%><br />
+   first_name :<%=text_field_tag :first_name, @user[:name]%><br /><br/>
+   <%=submit_tag "update"%>
+<%end%>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<title>Glo:User's Edit Profile</title>  
+  </head>
+  <body>
+    <div class="page_body">
+      <div class="page_body_wrapper admin">
+        <div id="admin_error" class="warning" style="display: none"></div>
+        <div id="admin_info" class="info" style="display: none"></div>
+        <!-- End alert message -->
+        <form novalidate="novalidate" accept-charset="UTF-8" action="/user/update" enctype="multipart/form-data" id="edit_profile" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="â" type="hidden"><input name="authenticity_token" value="oZZoWQ8COwSTnUFSD+6hLPNl7mUwTTfhMMjp3bs3v/4=" type="hidden"></div>    <div class="widget_container">
+        <div class="widget_header_left edit_prof">
+            <div class="widget_header_right"><span>Edit your profile information</span></div>
+        </div>
+        <input id="logged_in_user_info" readonly="true" name="logged_in_user_info" value="" type="hidden">
+	<input id="sync_source" readonly="true" name="sync_source" value="DW" type="hidden">
+        <div class="widget_body_left">
+            <div class="widget_body_right">
+                <div class="widget_row">
+                    <div class="main_content">
+                        <div class="form_row heading">Profile Pic</div>
+                        <div class="profile_data_container pro_editimg">
+                            <div class="profile_image_box pro_mgbn">
+				<img alt="Pic" src="edit_files/pic.jpg">						
+                            </div>
+                            <div class="pro_img_hint">
+                                <div class="mg10botm">Change your profile picture</div>
+                                <div class="upload_photos_container uphoto_pad">
+                                    <div class="file_listing uphoto_pad">
+                                            <div class="">
+                                                <input title="Choose File" id="profile_pic" name="profile_pic" class="textbox" alt="Choose File" type="file">
+                                                <div class="clear"></div>
+                                            </div>
+                                    </div>	
+				</div>
+                                <div class="clear"></div>
+                                <div class="form_data_help mg2top">File format: .jpg, .jpeg, .png, .gif. File size not exceeding 10 MB</div>
+			    </div>
+                            
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget_row">
+                    <div class="main_content">
+                        <div class="form_row heading">Work Details</div>
+                        <div class="profile_data_container">
+                            <div class="left_column_edit">
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="job_profile">Job Profile</label></div>
+                                    <div class="form_data_edit">
+                                        <textarea class="textarea protxtarea" id="job_profile" name="job_profile"></textarea>
+                                        <div class="form_data_help">Maximum 1024 characters</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_label_edit_display">Designation</div>
+                                    <div class="form_data_edit_display">Sr. Software Engineer</div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="form_row hide">
+                                    <div class="form_label_edit_display">Total Experiance</div>
+                                    <div class="form_data_edit_display">11 years</div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="right_column_edit">
+                                <div class="form_row">
+                                    <div class="form_label_edit_display">Employee ID</div>
+                                    <div class="form_data_edit_display">306598</div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_label_edit_display">Date of Joining</div>
+                                    <div class="form_data_edit_display">10 February 2014</div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_label_edit_display">Band/Grade</div>
+                                    <div class="form_data_edit_display">Band 1 / TE06</div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="form_row hide">
+                                    <div class="form_label_edit_display">Grade</div>
+                                    <div class="form_data_edit_display">TE06</div>
+                                    <div class="clear"></div>
+                                </div>
+                              <!--
+                                <div class="form_row">
+                                    <div class="form_label_edit_display">Dept.</div>
+                                    <div class="form_data_edit_display"></div>
+                                    <div class="clear"></div>
+                                </div>
+                              -->
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget_row">
+                    <div class="main_content">
+                        <div class="form_row heading">Contact Details</div>
+                        <div class="profile_data_container">
+                            <div class="left_column_edit">
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="office_phone">Office Phone</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="32" class="textbox" id="office_phone" name="office_phone" type="text">
+                                        <div class="form_data_help">Office phone number with extention</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="mobile">Mobile</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="32" class="textbox" id="mobile" name="mobile" value="9990759669" type="text">
+                                        <div class="form_data_help">Your mobile number</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+				<div class="form_row">
+                                    <div class="form_label_edit"><label for="home_phone">Home Phone</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="32" class="textbox" name="home_phone" id="home_phone" type="text">
+                                        <div class="form_data_help">Your home phone number</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+				<div class="form_row">
+                                    <div class="form_label_edit"><label for="home_phone">Emergency Phone</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="32" class="textbox" name="phone_emergency" id="phone_emergency" type="text">
+                                        <div class="form_data_help">Your emergency phone number</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="fax">Fax</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="32" class="textbox" id="fax" name="fax" type="text">
+                                        <div class="form_data_help">Your fax number</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+				<div class="form_row">
+                                    <div class="form_label_edit"><label for="voip">Voip Extension</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="16" class="textbox" name="voip" id="voip" value="2353" type="text">
+                                        <div class="form_data_help">Your Voip extension</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>	
+                                
+                                
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="room_no">Room/Seat No.</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="32" class="textbox" name="room_no" id="room_no" value="2-w-146" type="text">
+                                        <div class="form_data_help">Room/seat number allocated to you</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                
+                                <div class="form_row">
+                                    <div class="form_label_edit_display">Location</div>
+                                    <div class="form_data_edit_display"><span>NOIDA</span>, now at <span>Noida</span></div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="right_column_edit">
+				<div class="form_row">
+                                    <div class="form_label_edit_display">e-Mail</div>
+                                    <div class="form_data_edit_display">sudhir.tomar@globallogic.com</div>
+                                    <div class="clear"></div>
+                                </div>
+				<div class="form_row">
+                                    <div class="form_label_edit"><label for="gmail">Alternate e-Mail</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="128" class="textbox" id="gmail" name="gmail" type="text">
+                                        <div class="form_data_help">Your Alternate e-Mail ID</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                             
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="skype">Skype ID</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="128" class="textbox" id="skype" name="skype" type="text">
+                                        <div class="form_data_help">Your Skype ID</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                               
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="linkedin">LinkedIn Profile</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="128" class="textbox" id="linkedin" name="linkedin" type="text">
+                                        <div class="form_data_help mg_inht">Your Linkedln "Public profile" link</div>
+					<div class="form_data_help mg_inht">(available in your Linkedln home page)</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="twitter">Twitter Profile</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="128" class="textbox" id="twitter" name="twitter" type="text">
+                                        <div class="form_data_help mg_inht">Your Twitter profile link</div>
+                                        <div class="form_data_help mg_inht">(e.g. http://twitter.com/#!/username)</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="facebook">Facebook Profile</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="128" class="textbox" id="facebook" name="facebook" type="text">
+                                        <div class="form_data_help">Your Facebook profile link</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                
+                             
+                                
+                                
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+		
+		
+		<div class="widget_row">
+                    <div class="main_content">
+                        <div class="form_row heading">Address Details</div>
+                        <div class="profile_data_container">
+                            <div class="left_column_edit">
+				<div>
+				    <div class="form_row">
+					<div style="color: #333333;padding: 3px 5px;background: #f6f6f6;border-bottom: 1px solid #E1E4E7;width: 450px;">Office Address</div>
+				    </div>
+				    <div class="form_row" style="color: #888888;padding-left: 5px;">
+					GlobalLogic India Limited - Noida SEZ -1
+					<br>Noida
+					<br>Uttar Pradesh
+					<br>India
+					
+				    </div>
+				</div>
+				
+				<div>
+				    <div class="form_row">
+					<div style="color: #333333;padding: 3px 5px;background: #f6f6f6;border-bottom: 1px solid #E1E4E7;width: 450px;">Legal Address</div>
+				    </div>
+				    <div class="form_row" style="color: #888888;padding-left: 5px;">
+				   </div>
+				</div>
+                            </div>
+                            <div class="right_column_edit">
+			    <div class="form_row">
+    <div class="form_label_edit_display" style="color: #333333;padding: 3px 5px;background: #f6f6f6;border-bottom: 1px solid #E1E4E7;width: 450px">Current Home Address</div>
+    <div class="clear"></div>
+</div>
+    <input id="current_address_id" readonly="true" name="current_address_id" value="17157" type="hidden">
+   
+    <div class="form_row">
+        <div class="form_data_edit" style="width: 230px;float: left;">
+        <input checked="checked" id="address_radio_button_update" name="address_radio_button" onclick="$('div#address_effective_date').slideUp();" value="update" type="radio">Correct Existing Address
+        <div class="form_data_help">Select this if you want to correct or amend this address.</div>
+        </div>
+        <div class="form_data_edit" style="width: 230px;float: right;">
+        <input id="address_radio_button_new" name="address_radio_button" onclick="$('div#address_effective_date').slideDown();" value="new" type="radio">Update New Address
+        <div class="form_data_help">Select this if you want to enter a new address if you have moved.</div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    
+     <div class="form_row" style="display:none;" id="address_effective_date">
+        <div class="form_label_edit"><label for="address">Effective Date</label><span class="required">*</span>
+        </div>
+        <div class="form_data_edit">
+            <input class="date_textbox hasDatepicker" id="user_address_effective_date" name="user[address_effective_date]" size="30" type="text"><img title="Choose" alt="Choose" src="edit_files/calendar-icon.gif" class="ui-datepicker-trigger">
+        </div>
+    <div class="form_data_help">
+        <span id="date_help_text" style="margin-left: 126px;">Please select date between 13-Feb-2014 and 12-May-2014
+        <img alt="Help" src="edit_files/help.png" height="15px" width="15px"></span>
+    </div>
+        <div class="clear"></div>
+    </div>
+    <div class="form_row">
+        <div class="form_label_edit"><label for="anniversary">Address Style</label><span class="required">*</span></div>
+        <div class="form_data_edit">
+            <select class="form_validate" id="home_address_style" name="home[address_style]" onchange="loading_album();"><option value="">Select Address Style</option>
+<option value="AR_GLB">Argentina Style</option>
+<option value="CL_GLB">Chile Style</option>
+<option value="IN" selected="selected">India Style</option>
+<option value="UA">Ukraine Style</option>
+<option value="GB">United Kingdom Style</option>
+<option value="US">United States Style</option>
+<option value="GENERIC">Others</option></select>
+        </div>
+        <div class="clear"></div>
+    </div>
+    
+    
+    
+    
+   
+    <div id="current_address_fields">
+            <div id="user_address_form_IN">
+                <div class="form_row">
+    <div class="form_label_edit"><label for="yahoo">Address Line 1</label><span class="required">*</span></div>
+    <div class="form_data_edit">
+        <input maxlength="128" class="textbox form_validate" id="address_1" name="address_1" value="Sector-39" type="text">
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="form_row">
+    <div class="form_label_edit"><label for="yahoo">Address Line 2</label></div>
+    <div class="form_data_edit">
+        <input maxlength="128" class="textbox" id="address_2" name="address_2" type="text">
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="form_row">
+    <div class="form_label_edit"><label for="yahoo">Address Line 3</label></div>
+    <div class="form_data_edit">
+        <input maxlength="128" class="textbox" id="address_3" name="address_3" type="text">
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="form_row">
+    <div class="form_label_edit"><label for="yahoo">City</label><span class="required">*</span></div>
+    <div class="form_data_edit">
+        <input maxlength="128" class="textbox form_validate" id="city" name="city" value="Noida" type="text">
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="form_row">
+    <div class="form_label_edit"><label for="yahoo">District</label></div>
+    <div class="form_data_edit">
+        <input maxlength="128" class="textbox" id="region" name="region" type="text">
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="form_row">
+    <div class="form_label_edit"><label for="yahoo">State/UT</label></div>
+    <div class="form_data_edit">
+        <select class="" id="state_id" name="state_id"><option value="">Select State</option><option value="23">Andaman &amp; Nicobar</option>
+<option value="9">Andhra Pradesh</option>
+<option value="65">Arunachal Pradesh</option>
+<option value="33">Assam</option>
+<option value="66">Bihar</option>
+<option value="92">Chandigarh</option>
+<option value="46">Chattisgarh</option>
+<option value="34">Dadra &amp; Nagar Haveli</option>
+<option value="24">Delhi</option>
+<option value="77">Diu &amp; Daman</option>
+<option value="47">Goa</option>
+<option value="67">Gujarat</option>
+<option value="93">Haryana</option>
+<option value="35">Himachal Pradesh</option>
+<option value="10">Jammu &amp; Kashmir</option>
+<option value="94">Jharkhand</option>
+<option value="36">Karnataka</option>
+<option value="88">Kerala</option>
+<option value="11">Lakshadweep</option>
+<option value="48">Madhya Pradesh</option>
+<option value="12">Maharashtra</option>
+<option value="68">Manipur</option>
+<option value="25">Meghalaya</option>
+<option value="78">Mizoram</option>
+<option value="13">Nagaland</option>
+<option value="49">Orissa</option>
+<option value="50">Pondicherry</option>
+<option value="14">Punjab</option>
+<option value="37">Rajasthan</option>
+<option value="51">Sikkim</option>
+<option value="52">Tamil Nadu</option>
+<option value="26">Tripura</option>
+<option value="38" selected="selected">Uttar Pradesh</option>
+<option value="79">Uttarakhand</option>
+<option value="95">West Bengal</option></select>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="form_row">
+    <div class="form_label_edit"><label for="yahoo">Pin Code</label></div>
+    <div class="form_data_edit">
+        <input maxlength="128" class="form_validate" id="zip_code" name="zip_code" value="201306" type="text">
+        <span id="zip_code_loading"></span>
+        <div class="form_data_help" id="pincode_msg"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="form_row">
+    <div class="form_label_edit"><label for="yahoo">Country</label><span class="required">*</span></div>
+    <div class="form_data_edit">
+        India
+        <input id="country" readonly="true" name="country" value="IN" type="hidden">
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+            </div>
+    </div>
+</div>
+
+
+
+			    <div class="clear"></div>
+			    </div>
+                    </div>
+                </div>
+		
+
+                <div class="widget_row">
+                    <div class="main_content">
+                        <div class="form_row heading">Other Details</div>
+                        <div class="profile_data_container">
+                            <div class="left_column_edit">
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="about_me">About me</label></div>
+                                    <div class="form_data_edit">
+                                        <textarea class="textarea" name="about_me" id="about_me" rows="3" cols="100"></textarea>
+                                        <div class="form_data_help">Tell us something about yourself (within 1024 characters)</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="home_page">Homepage</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="128" class="textbox" id="home_page" name="home_page" type="text">
+                                        <div class="form_data_help">Maximum 128 characters</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="form_row hide">
+                                    <div class="form_label_edit"><label for="name_local">Name in local language</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="255" class="textbox" id="name_local" name="name_local" type="text">
+                                        <div class="form_data_help">Maximum 255 characters</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+				
+				<!----MARITAL START---->
+				<div class="form_row" style="border-top: 1px solid #E1E1E1;padding-top: 5px;margin-top: 5px;">
+				    <div class="form_row">
+					<div style="color: #333333;padding: 3px 5px;background: #f6f6f6;border-bottom: 1px solid #E1E4E7;width: 450px;">Marital Status</div>
+				    </div>
+				    <div class="form_data_edit" style="width: 230px;float: left;">
+				    <input checked="checked" id="marital_radio_button_update" name="marital_radio_button" onclick="$('div#marital_effective_date').slideUp();" value="update" type="radio">Correct Existing Marital Status
+				    <div class="form_data_help">Select this if you want to correct or complete the current details</div>
+				    </div>
+				    <div class="form_data_edit" style="width: 230px;float: right;">
+				    <input id="marital_radio_button_new" name="marital_radio_button" onclick="$('div#marital_effective_date').slideDown();" value="new" type="radio">Update New Marital Status
+				    <div class="form_data_help">Select this if you want to enter new information because of a real change to the current details</div>
+				    </div>
+				    <div class="clear"></div>
+				</div>
+				<div class="form_row" style="display:none;" id="marital_effective_date">
+                                    <div class="form_label_edit"><label for="anniversary">Effective Date</label><span class="required">*</span></div>
+                                    <div class="form_data_edit">
+					<input class="date_textbox form_validate hasDatepicker" id="user_marital_status_effective_date" name="user[marital_status_effective_date]" size="30" type="text"><img title="Choose" alt="Choose" src="edit_files/calendar-icon.gif" class="ui-datepicker-trigger">
+                                    </div>
+					<div class="form_data_help">
+					    <span id="marital_help_text" style="margin-left: 126px;">Please select date between 24-Mar-2014 and 12-May-2014
+					    <img alt="Help" src="edit_files/help.png" height="15px" width="15px"></span>
+					</div>
+                                    <div class="clear"></div>
+                                </div>
+				<div class="form_row">
+                                    <div class="form_label_edit"><label for="anniversary">Marital Status</label><span class="required">*</span></div>
+                                    <div class="form_data_edit">
+					<select class="form_validate" id="user_marital_status_id" name="user[marital_status_id]"><option value="">Select Marital Status</option>
+<option value="3">Divorced</option>
+<option value="8">Domestic Partner</option>
+<option value="4">Legally Separated</option>
+<option value="1">Living Together</option>
+<option value="5" selected="selected">Married</option>
+<option value="6">Single</option>
+<option value="7">Widowed</option>
+<option value="2">Widowed With Surviving Pension</option></select>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>				
+				
+				<!----MARITAL END---->
+				
+                            </div>
+
+                            <div class="right_column_edit">
+                                <div class="form_row">
+                                    <div class="form_label_edit_display"><label for="birthday">Birthday</label><span class="required hide">*</span></div>
+                                    <div class="form_data_edit_display">
+                                    	20th October
+                                            <div class="form_data_help mg_inht">you can change visibility of your Birthdate from preferences</div>
+                                    </div>
+                                    <div class="form_data_edit hide">
+                                        <input maxlength="255" class="textbox" id="birthday" name="birthday" value="03/11" type="text">
+                                        <div class="form_data_help hide"><span class="required">*</span>Required field, please fill in as dd/mm format</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_label_edit_display"><label for="anniversary">Anniversary</label></div>
+                                    <div class="form_data_edit_display">
+                                    	30th November
+                                            <div class="form_data_help mg_inht">you can change visibility of your Anniversary date from preferences</div>
+                                    </div>
+                                    <div class="form_data_edit hide">
+                                        <input maxlength="5" class="textbox" id="anniversary" name="anniversary" type="text">
+                                        <div class="form_data_help hide">please fill in as dd/mm format</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+				
+				
+				
+				
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="vh_1">Vehicle Registration 1</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="128" class="textbox" name="vh_1" id="vh_1" type="text">
+                                        <div class="form_data_help">Maximum 128 characters</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_label_edit"><label for="vh_2">Vehicle Registration 2</label></div>
+                                    <div class="form_data_edit">
+                                        <input maxlength="128" class="textbox" name="vh_2" id="vh_2" type="text">
+                                        <div class="form_data_help">Maximum 128 characters</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widget_footer_left">
+            <div class="widget_footer_right">
+                <div class="button_cont">
+                    <div class="right_buttons">
+                        <!--<input type="submit" style="position: absolute; left: -9999px"/>-->
+			    <a href="javascript:void(0);" id="submit_edit_form_dw" class="button_main " title="Update" onclick="$('#edit_profile').submit();return false;"><span>Update</span></a>
+                        <a href="https://glo.globallogic.com/users/profile/sudhir.tomar" class="button_negative" title="Cancel"><span>Cancel</span></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<!--Show Password Popup Start-->
+<div style="display:none;">
+    <div id="show_password_popup" style="height:180px;width:350px;">
+        
+<!--Login section-->
+ <div class="login_widget_container" style="">
+   <div class="widget_header_left">
+     <div class="widget_header_right"><span>Authenticate Yourself</span></div>
+   </div>
+   <div class="widget_body_left">
+     <form id="edit_profile_authenticate">
+         <div class="widget_body_right">
+           <div class="login_inst_text">Please authenticate yourself to update profile</div>
+           <div class="login_row">
+             <div class="label"><label for="password">Password</label></div>
+             <div class="control">
+              <input name="user_auth" id="user_auth" class="login_textbox" type="password">
+              <span id="password_empty" style="font-size:10px;color:red;" class="hide"></span>
+             </div>
+             <div class="clear"></div>
+           </div>
+           <div class="login_row" style="width:240px; margin-top:20px;">
+             <div class="buttons">
+               <a class="button_main" title="Login" id="button_authenticate" onclick="authenticate_form();"><span>Authenticate</span></a>
+             </div>
+             <!--<input type="submit" style="position: absolute; left: -9999px" onclick="authenticate_form();return false;"/>-->
+             <div class="clear"></div>
+           </div>
+         </div>
+     </form>
+     <div class="clear"></div>
+   </div>
+   <div class="widget_footer_left"><div class="widget_footer_right"></div></div>
+ </div>
+ <!--End login section-->
+    </div>
+</div>
+<!--Show Members Popup End -->
+
+        <div class="clear"></div>
+      </div>
+      <div id="dialog_gallery"></div>
+    </div>
+    <div style="display:none">
+      <div id="loading_album_message" style="text-align: center; vertical-align: middle;">
+        <img alt="Ajaxindicator" src="/anim_loading_75x75.gif" tite="Ajaxindicator">
+      </div>
+    </div>
+    <div id="user_profile_tooltip">
+
+    </div>  
+    <!-- End page body section -->
+    <!-- Page footer section -->
+
+<!-- End page footer section -->
+<script type="text/javascript">
+//$(window).load(function() {
+// $("img.lazy").lazyload({ 
+//    effect : "fadeIn"
+//});
+//});
+</script>
+    <!--UTIP POPUP -->	
+    <div class="allcom_popup_wrapper" id="utip_popup" style="display:none;">
+      <div class="allcom_popup_box">
+        <div class="container">
+          <div class="allcom_arrow"></div>
+          <div class="mycom_popup">
+            <div class="box_up">
+              <div class="tmem_img">
+                <a class="utip_user_linking" title="View profile"><img id="utip_user_image" title="View profile"></a>
+              </div>
+              <div class="pro_dtlbox mycom_info">
+                <div class="nm_spacer">
+                  <a class="utip_user_linking down_link" id="utip_displayname" title="View profile"></a>
+                </div>
+                <div class="tmem_txt mycom_grtxt" id="utip_designation"></div>
+                <div class="tmem_contdtl mycom_cont">
+                  <div>
+                    <div>
+                      <div class="my_sprite ph_icon">Phone - </div>
+                      <div class="txt_wrp lc_cdw drk_gray" id="utip_phone"></div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div>
+                    <div>
+                      <div class="my_sprite email_icon">e-Mail -  </div>
+                      <div class="txt_wrp lc_cdw"><a href="http://mail.globallogic.com/mail/?shva=1#compose" target="_blank" title="e-mail" class="mycom_mail" id="utip_email"></a></div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="allclear"></div>
+            </div>
+            <div class="box_down">
+              <a href="#" class="down_link down_pad utip_user_linking" title="View profile">View Profile</a>
+              <span id="add_follow_link"></span>
+              <div class="allclear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>	
+    <!--UTIP POPUP END-->
+  
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-helper-hidden-accessible"></div><div style="display: none;" id="cboxOverlay"></div><div style="display: none; padding-bottom: 42px; padding-right: 42px;" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="width: 0px; height: 0px; overflow: hidden; float: left;" id="cboxLoadedContent"></div><div style="float: left;" id="cboxLoadingOverlay"></div><div style="float: left;" id="cboxLoadingGraphic"></div><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><div style="float: left;" id="cboxNext"></div><div style="float: left;" id="cboxPrevious"></div><div style="float: left;" id="cboxSlideshow"></div><div style="float: left;" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

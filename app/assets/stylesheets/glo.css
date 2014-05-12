@@ -1,0 +1,41 @@
+/* CSS Document */
+.wordwrap {word-wrap:break-word;word-break:keep-all;font-family:Arial,Helvetica,sans-serif;overflow:hidden;-moz-binding:url('/wordwrap.xml#wordwrap');}
+
+.hidden_button {position: absolute;left:-9999px;}
+
+#post_options {position:absolute;margin:0 !important;width:129px;z-index:1000;}
+.post-dropdown {background:url(../images/post_types_small.png) no-repeat;padding-left:15px;font-style:normal;}
+.post-dropdown.general_post_icon {background-position:0px 2px;}
+.post-dropdown.document_post_icon {background-position:0px -11px;}
+.post-dropdown.question_post_icon {background-position:0px -23px;}
+.post-dropdown.idea_post_icon {background-position:0px -35px;}
+.post-dropdown.media_post_icon {background-position:0px -48px;}
+
+.breadcrum{
+	background-color:#FFFBDB;
+	background-image:none;
+	background-position:0 0;
+	background-repeat:repeat;
+	border-bottom-color:#FFECC0;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-top-color:#FFD29E;
+	border-top-style:solid;
+	border-top-width:1px;
+	padding:5px;
+}
+
+.featured_comm {background:url("../images/sprite.png") no-repeat scroll 100% -644px transparent;display:block;float:left;margin-left:0px;text-indent:-999999px;width:60px;}
+
+#recent_upload_post a {display:inline-block;border:1px solid #aaa;padding:5px;margin:2px;width:56px;}
+
+.transparent {-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity:0.5;}
+
+/*By Vineet Sethi for GL Sites*/
+.app_info_box {border-top:1px solid #E1E1E1;margin-bottom:5px;padding:4px;}
+
+.app_card_row_column {float: left;margin-right:15px;width:455px;}
+
+.vcard_text_cont.app {width: 290px;}
+
+.vcard_app_avatar {float:left;padding-right:30px;}
